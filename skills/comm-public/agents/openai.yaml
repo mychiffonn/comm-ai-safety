@@ -1,0 +1,4 @@
+interface:
+  display_name: "Communicate AI Safety to the Public"
+  short_description: "Create grounded public AI safety explainers"
+  default_prompt: "Use $comm-public to turn these technical sources into an audience-appropriate public communication package."

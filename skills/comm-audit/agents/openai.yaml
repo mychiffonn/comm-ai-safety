@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit AI Safety Communication"
+  short_description: "Audit AI safety claims, context, and language"
+  default_prompt: "Use $comm-audit to audit this AI safety communication artifact against its technical sources."

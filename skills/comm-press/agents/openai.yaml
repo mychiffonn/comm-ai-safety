@@ -1,0 +1,4 @@
+interface:
+  display_name: "Communicate AI Safety to the Press"
+  short_description: "Create accurate AI safety press materials"
+  default_prompt: "Use $comm-press to turn these technical sources into a grounded press communication package."
