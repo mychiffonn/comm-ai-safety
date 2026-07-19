@@ -13,9 +13,18 @@ style: |
 
 # Make careful AI-safety communication the easy default
 
-## comm-ai-safety
+## AI-safety communication skills
 
-Turn technical sources into reviewable public communication—without losing the conditions that make a claim true.
+`comm-ai-safety` turns technical sources into fast, reviewable public communication—then keeps human approval and source fidelity as publication gates.
+
+---
+
+# Portable skills make careful communication easier to repeat
+
+1. **Bring your own harness** — use the AI or agent harness you already trust.
+2. **Package the judgment** — workflows, principles, references, and templates travel together.
+3. **Move faster with gates** — draft early; verify evidence and get human approval before publication.
+4. **Keep one evidence spine** — public, press, and audit outputs share the same claim boundaries.
 
 ---
 
@@ -23,31 +32,38 @@ Turn technical sources into reviewable public communication—without losing the
 
 | Technical result | Public artifact | Avoidable distortion |
 |---|---|---|
-| Bounded by model, task, prompting, baseline, uncertainty, and caveats. | A release, post, visual, or demo must remain clear, useful, and faithful under compression. | Capability becomes propensity; a benchmark becomes real-world harm; a demo becomes a misleading proxy. |
+| Bounded by model, task, prompting, baseline, uncertainty, and caveats. | A release, post, visual, or demo must remain clear, useful, and faithful under compression. | Capability becomes propensity; a model-only score becomes misuse uplift or deployment evidence; a demo becomes a misleading proxy. |
 
 > The stakes are not stylistic. Distorted claims weaken scrutiny and can create avoidable hype or panic around AI-safety research.
 
 ---
 
-# A small workflow creates a quality-control layer
+# A useful draft comes early; publication checks stay strict
 
-1. **Anchor claims** — build a compact ledger tied to primary sources, conditions, numbers, scope, and caveats.
-2. **Adapt responsibly** — a researcher validates the main claims; the authoring skill fits them to one defined audience.
-3. **Audit before release** — check the finished artifact for fidelity, missing context, unsafe demos, rights, and accessibility.
+1. **Frame and draft** — name one audience and goal. Lead with one takeaway, up to two supporting claims, and a visible working-draft label.
+2. **Verify and approve** — check every load-bearing claim against primary sources. Then a responsible human approves the core evidence map.
+3. **Test and audit** — use reader teach-back, rapid checks during drafting, and a full, proportionate audit before publication.
 
-**Expected effect:** fewer public artifacts collapse capability, propensity, misuse uplift, and observed deployment evidence into one another.
+**The promise:** useful copy arrives early, while “audited,” “final,” and “publishable” remain earned states.
 
 ---
 
-# Three skills cover the channels where nuance disappears
+# Three skills share one evidence-preserving handoff
 
 | Skill | What it delivers |
 |---|---|
-| **comm-public** | Explainers, FAQs, social copy, visual briefs, and safer demo briefs for a named audience. |
-| **comm-press** | Source-verifiable releases, media briefs, pitches, and journalist FAQs without manufactured hype. |
-| **comm-audit** | Claim-by-claim checks of conditions, caveats, quantitative context, safety, rights, and accessibility. |
+| **comm-public** | Fast explainers, FAQs, social copy, visuals, and safer demo briefs for one named audience. |
+| **comm-press** | Working releases, briefs, pitches, and journalist FAQs with independent context, quote approval, and rights checks. |
+| **comm-audit** | Rapid core-claim checks during drafting; full publication or corpus audits when risk and reuse justify them. |
 
-The enforceable rule: no artifact is called audited or publishable until human checkpoints and material audit items are resolved.
+The enforceable rule: drafts can arrive early. “Audited,” “final,” and “publishable” wait for human approval and resolved material findings.
+
+---
+
+# Expand to new audiences with human experts
+
+1. **Add audience skills** — start with policymakers and grantors, then extend wherever a decision context needs distinct evidence and formats.
+2. **Talk to human experts** — co-design and test with research communicators, policy and funding practitioners, journalists, accessibility specialists, and safety reviewers.
 
 ---
 
@@ -59,5 +75,6 @@ Scan for the GitHub repo.
 
 ![w:180](comm-ai-safety-github-qr.png)
 
+- Repo: `mychiffonn/comm-ai-safety`
+- Fast draft, proportionate audit
 - Worked demo included
-- Human-reviewed claims

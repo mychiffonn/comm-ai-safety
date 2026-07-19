@@ -11,7 +11,7 @@ Treat channel outputs as linked layers rather than isolated summaries:
 3. a five-to-eight-minute researcher post;
 4. the paper, supplement, data/code, and living update record.
 
-Keep one approved claim ledger across every layer. Shorter layers may omit secondary detail, but must retain any condition that changes the main claim. Link downward to the evidence and upward to later corrections.
+Keep one approved core evidence map across every layer and expand it into a full ledger only where deeper formats need it. Shorter layers may omit secondary detail, but must retain any condition that changes the main claim. Link downward to the evidence and upward to later corrections.
 
 ## X/Twitter and short threads
 

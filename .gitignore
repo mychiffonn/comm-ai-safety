@@ -1,3 +1,4 @@
 # Keep hackathon rubric and submission materials under version control.
 outputs/comm-ai-safety-pitch/
 outputs/*.inspect.ndjson
+hackathon*.md

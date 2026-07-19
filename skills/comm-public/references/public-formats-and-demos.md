@@ -27,6 +27,16 @@ Do not use education level as a proxy for every audience need. Prefer an iterati
 
 Front-load one main message, then layer detail. Prefer familiar words and define necessary terms in place. Use concrete examples as illustrations, not as substitutes for representative evidence.
 
+## Rapid message map
+
+Start with one obvious message, not a miniature paper. Use at most three core points in total:
+
+1. **Main takeaway:** what happened, in one or two sentences.
+2. **Support:** up to two facts that make the takeaway credible or useful.
+3. **Boundary:** the leading limitation or likely overreading.
+
+Place the main takeaway at the top, beginning, or front of the artifact. Put supporting detail and the evidence record underneath it so a reader who stops early still leaves with a scoped understanding.
+
 ## Demo decision
 
 Build a demo only when interaction makes a core claim, parameter, uncertainty, or tradeoff easier to understand than static prose.
@@ -78,6 +88,9 @@ Use teach-back: ask a reader to explain the main result, its conditions, its lar
 
 - The [National Academies' science communication report](https://www.nationalacademies.org/read/23674/chapter/4) supports audience-, goal-, and context-specific, iterative communication and warns against assuming that more facts alone resolve disagreement.
 - The [CDC Clear Communication Index](https://www.cdc.gov/ccindex/pdf/clear-communication-user-guide.pdf) supports one obvious main message, front-loading, careful explanation of numbers, visual design, and audience pretesting.
+- [CDC's clear-writing guide](https://www.cdc.gov/nceh/clearwriting/docs/clear-writing-guide-508.pdf) recommends one succinct message, one to three key points, and limited supporting information.
+- [WHO communication guidance](https://www.who.int/about/communications/relevant/tailoring-messages) organizes communication around one overarching outcome and three supporting points tailored to the audience and channel.
+- [GOV.UK's evidence review for content design](https://www.gov.uk/government/publications/govuk-content-principles-conventions-and-research-background/govuk-content-principles-conventions-and-research-background) supports concise, scannable, front-loaded web content with summaries linking to deeper detail.
 - [AHRQ's teach-back guidance](https://www.ahrq.gov/teamstepps-program/curriculum/communication/tools/teachback.html) supports checking understanding by asking people to explain information in their own words.
 - The UK AI Security Institute describes why [capability elicitation conditions](https://www.aisi.gov.uk/blog/our-approach-to-ai-capability-elicitation) such as prompting, tools, sampling, and scaffolding affect evaluation results.
 - The Frontier Model Forum proposes [tiered reporting for AI-bio evaluations](https://www.frontiermodelforum.org/uploads/2025/03/PDF-Version-of-Preliminary-Reporting-Tiers.pdf), supporting high-level public reporting while restricting actionable vulnerabilities and sensitive data.

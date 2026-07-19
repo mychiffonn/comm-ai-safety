@@ -51,7 +51,7 @@ The secure-code, educational-context, and jailbreak controls answer natural read
 - **Five–eight minutes for researchers:** hyperparameters, uncertainty, seeds, judge/filtering, prompt sensitivity, failed experiments, related work, and open problems.
 - **Evidence layer:** paper/supplement, repository, immutable archive, sample browser, and dated updates.
 
-Each layer uses the same approved ledger. A reader can stop early without receiving a false main takeaway.
+Each layer uses the same approved core evidence map, expanded only where the deeper format needs it. A reader can stop early without receiving a false main takeaway.
 
 ### Preserve an informal voice, not informal evidence
 

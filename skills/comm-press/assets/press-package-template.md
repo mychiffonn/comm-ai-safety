@@ -1,8 +1,22 @@
-# AI safety press package
+# AI safety press run record and package
 
 > Artifact: Institutional news release — not independent journalism
 > Working status: [draft / claims approved / audited / publishable]
 > Distribution eligibility: [platform checked, date, result]
+
+## Output artifacts
+
+- Audience-facing artifact: `<short-paper-name>.<extension>`
+- Requested extension / default: [extension / `.md`]
+- This file contains internal evidence, verification, approval, and package notes. Do not copy these sections into the audience draft.
+
+## 30-second press brief
+
+**What happened:**
+
+**Why it matters:**
+
+**What not to conclude:**
 
 ## Release record
 
@@ -20,35 +34,13 @@
 - Media contact and correction contact:
 - Suggested citation for the press package:
 
-## Approved main-claim ledger
+## Core evidence map
 
-| ID | Plain claim | Class | Source anchor | Conditions | Exact result and uncertainty | Scope/caveats | Status | Human decision |
+| ID | Plain claim | Class | Source anchor | Essential condition | Number context | Boundary | Status | Human decision |
 |---|---|---|---|---|---|---|---|---|
 | C1 | | | | | | | | |
 
-## News release
-
-### [Descriptive headline]
-
-#### [Subhead with result and essential qualifier]
-
-**[CITY, date]** — [Who evaluated what, under which essential condition and baseline, and what was found.]
-
-[Why this matters, labeled as interpretation where appropriate.]
-
-### What was tested
-
-### Results and comparison
-
-### Conditions and limitations
-
-### Context, related work, and replication
-
-### Quotes
-
-> [DRAFT — REQUIRES SPEAKER APPROVAL]
-
-### Availability, funding, and disclosures
+> Use one main claim and at most two supporting claims. Expand to a full ledger only when risk, contestation, length, or reuse warrants it.
 
 ## Notes to editors
 

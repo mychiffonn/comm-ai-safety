@@ -16,6 +16,12 @@ A release is an interested institutional source. Make that status explicit and m
 - Preserve human labor, supervision, data work, tools, and scaffolding that make the result possible.
 - Treat quotes as evidence-bearing attributed speech: never invent them, label drafts, obtain speaker approval, and retain meaning through edits.
 
+## Fast press drafting pattern
+
+Do not require a writer to understand every appendix before seeing the story. Start from the full primary source but make a thin first pass through the abstract or executive summary, conclusion/discussion, and central result/figure. Draft one main takeaway and at most two supporting points, each with a source anchor, interpretation-changing condition, and boundary. Mark unresolved details visibly and verify them before approval.
+
+Front-load `what happened / why it matters / what not to conclude`. Keep methods, related work, and the expanded evidence ledger as linked verification layers rather than competing opening messages.
+
 ## News and comparison checks
 
 - Define the news value without promotional adjectives.
@@ -99,6 +105,9 @@ Public availability is not a license. Track the paper/report, figures, dataset, 
 
 - A peer-reviewed observational study found that exaggerated university releases were associated with exaggerated news coverage, without clear evidence of more pickup: [Sumner et al., BMJ (2014)](https://www.bmj.com/content/349/bmj.g7015.abstract).
 - [Science Media Centre reporting guidelines](https://www.sciencemediacentre.org/wp-content/uploads/2012/09/10-best-practice-guidelines-for-science-and-health-reporting.pdf) emphasize source, study design, causality, absolute risk, limitations, and external context.
+- [NIH's PIO guidance](https://www.nih.gov/about-nih/nih-pio-network/pio-101) recommends putting the key news in the headline and lead, explaining the advance in nontechnical language, and making the material quickly usable by reporters.
+- [CDC's clear-writing guide](https://www.cdc.gov/nceh/clearwriting/docs/clear-writing-guide-508.pdf) recommends one succinct message, one to three key points, and limited supporting information.
+- [WHO communication guidance](https://www.who.int/about/communications/relevant/tailoring-messages) uses one overarching communication outcome with three supporting points tailored to the audience and channel.
 - The [National Association of Science Writers Code](https://www.nasw.org/page/nasw-code-ethics-member-conduct) addresses accuracy, source credentials, conflicts, and corrections.
 - The [Society of Professional Journalists Code](https://www.spj.org/spj-code-of-ethics/) addresses independence, labeling advocacy, conflicts, and transparency.
 - [AP's AI reporting guidance](https://www.ap.org/the-definitive-source/announcements/ai-guidance-terms-added-to-ap-stylebook/) advises against human characteristics and gendered pronouns for AI systems.

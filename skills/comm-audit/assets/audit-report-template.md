@@ -1,8 +1,33 @@
 # AI safety communication audit
 
-> Readiness: [Ready / Ready with disclosed limitations / Not ready]
+> Audit mode: [Rapid core-claim check / Full publication audit / Corpus audit]
+> Readiness (full/corpus only): [Ready / Ready with disclosed limitations / Not ready]
 > Audit date:
 > Auditor:
+
+## Rapid core-claim check (use during drafting only)
+
+> Result: [Sound basis for revision / Rebuild the message map]
+> This is not a publication-readiness decision.
+
+### Corrected 30-second orientation
+
+- What happened:
+- Why it matters to this audience:
+- What not to conclude:
+
+### Compact claim check
+
+| Core claim | Source anchor | Essential condition/boundary | Result | Minimal correction |
+|---|---|---|---|---|
+
+### Verify before full audit
+
+- [Prioritized gap]
+
+---
+
+Use the sections below for a full publication or corpus audit.
 
 ## Scope and records
 

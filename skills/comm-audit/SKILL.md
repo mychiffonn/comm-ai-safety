@@ -14,12 +14,24 @@ Obtain:
 - the artifact or corpus, including headline, captions, visuals, metadata, and short-form derivatives;
 - authoritative primary source versions and supplements;
 - intended audience, communication goal, channel, date, and word/format constraints;
-- the approved claim ledger when another `comm-*` skill produced one;
+- the approved core evidence map or expanded claim ledger when another `comm-*` skill produced one;
 - relevant related work, corrections, funding/conflicts, and license information when available.
 
 If a main source is inaccessible or its version is uncertain, continue only as a provisional audit and label every affected conclusion `unverified`.
 
 Always read [references/audit-criteria.md](references/audit-criteria.md). Use [assets/audit-report-template.md](assets/audit-report-template.md) for the report.
+
+## Interface and files
+
+Present rapid and full audit output in the AI chat or harness by default. Write an audit file only when the user requests one or when producing a repository demo. For a demo, use `demo/<short-paper-name>/comm-audit-run.md`. Never overwrite the audience artifact `<short-paper-name>.<extension>` produced by an authoring skill.
+
+## Choose audit depth
+
+- **Rapid core-claim check:** use during drafting. Check the headline/opening, one main takeaway, up to two supporting claims, material numbers, essential conditions, leading limitation, and audience fit. Return a corrected message map and prioritized fixes. Label the result `rapid check — not publication readiness`.
+- **Full publication audit:** use before publication, for high-risk or contested material, or when the user requests a complete review. Apply the full workflow and issue a readiness decision.
+- **Corpus audit:** use the full criteria with the comparison additions in step 5.
+
+Do not turn a small, low-risk draft into a corpus-scale audit. Escalate from rapid to full when a claim concerns sensitive capabilities, high-consequence decisions, unresolved source/version conflicts, contested evidence, or likely multi-channel reuse.
 
 ## Workflow
 
@@ -27,9 +39,9 @@ Always read [references/audit-criteria.md](references/audit-criteria.md). Use [a
 
 Record exact artifact and source URLs/files, titles, publishers/authors, dates, versions, status, and access time. Separate originals, updates, corrections, syndications, and adaptations. Do not audit a search snippet as if it were the artifact.
 
-### 2. Reconstruct the claims
+### 2. Reconstruct the load-bearing claims
 
-Extract every headline or main takeaway plus any sentence, number, visual, quote, or interaction that could materially change a reader's belief. Map each to:
+For a rapid check, extract the headline/opening, one main takeaway, up to two supporting claims, and any number, visual, quote, or interaction that could materially change the takeaway. For a full audit, extract every material claim. Map each to:
 
 - its source anchor;
 - claim class;
@@ -39,7 +51,7 @@ Extract every headline or main takeaway plus any sentence, number, visual, quote
 - scope and caveats;
 - whether it is reported, derived, contextual, disputed, speculative, or normative.
 
-Compare this map with any approved ledger. Treat a new unsourced claim in the artifact as a finding, not an automatic ledger update.
+Compare this map with any approved evidence map or ledger. Treat a new unsourced claim in the artifact as a finding, not an automatic evidence-record update.
 
 ### 3. Audit each artifact
 
@@ -81,7 +93,7 @@ Do not claim to have found “all coverage” without a defined search universe.
 
 ### 6. Decide readiness
 
-Issue one result:
+For a full audit, issue one result:
 
 - **Ready:** no unresolved blocker or major finding; material moderate findings repaired or consciously accepted.
 - **Ready with disclosed limitations:** no blocker; unresolved issues are visible and do not overturn the main takeaway.
@@ -89,9 +101,13 @@ Issue one result:
 
 An audit is advisory evidence, not a substitute for author, subject-matter, security, legal, accessibility, or platform approval.
 
+For a rapid check, instead issue `sound basis for revision` or `rebuild the message map`, list the smallest necessary fixes, and state what a full audit still needs.
+
 ## Output
 
-Deliver:
+For a rapid check, deliver the corrected 30-second orientation, a compact claim-to-source table, prioritized fixes, and verification gaps.
+
+For a full audit, deliver:
 
 1. scope, source/version record, and readiness decision;
 2. concise claim-to-source matrix;

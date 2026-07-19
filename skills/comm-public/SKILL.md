@@ -1,16 +1,16 @@
 ---
 name: comm-public
-description: Turn AI safety papers, technical reports, evaluations, system cards, or other primary sources into grounded, audience-appropriate public communication packages. Use when a researcher needs a public summary, explainer, FAQ, visual brief, social copy, or safe interactive website/demo, or when a non-researcher needs to understand and explain technical AI safety results without losing conditions, uncertainty, caveats, or provenance.
+description: Turn AI safety papers, technical reports, evaluations, system cards, or other primary sources into grounded public communication saved with a short paper name and the requested extension, defaulting to Markdown, while presenting evidence and workflow notes in the chat or harness. Use when a researcher needs a public summary, explainer, FAQ, visual brief, social copy, or safe interactive website/demo, or when a non-researcher needs to understand and explain technical AI safety results without losing conditions, uncertainty, caveats, or provenance.
 ---
 
 # Communicate AI Safety to the Public
 
-Create accessible communication without making the underlying evidence sound stronger, broader, or more settled than it is. Treat communication as a two-way process: establish the audience's goal and understanding, then test and revise the artifact.
+Create accessible communication without making the underlying evidence sound stronger, broader, or more settled than it is. Give the user a useful working draft quickly, then verify and revise its load-bearing claims before publication.
 
 ## Non-negotiable rules
 
 - Use primary sources as the authority for claims. Label secondary context, interpretation, and speculation separately.
-- Do not draft publication-ready copy until a human approves the main-claim ledger. If the user explicitly waives the checkpoint, mark the ledger `human review waived` and keep unresolved items visible.
+- Draft early, but label unapproved copy `working draft — not yet verified or approved`. Do not call copy final, publishable, or source-verified until a responsible human approves the core evidence map and material audit findings are resolved.
 - Preserve evaluation conditions, comparison baselines, uncertainty, base rates, caveats, paper status, and conflicts that could change interpretation.
 - Distinguish capability, propensity, misuse uplift, and observed deployment evidence. Do not substitute one for another.
 - Never invent a quote, citation, number, consensus, implication, or author intention.
@@ -21,18 +21,36 @@ Create accessible communication without making the underlying evidence sound str
 - Confirm that `$comm-audit` is available before starting. It is a required dependency for the final audit. If unavailable, explain how to install it from the same bundle; drafting may continue, but do not call the result audited, final, or publishable.
 - Read [references/public-formats-and-demos.md](references/public-formats-and-demos.md) when selecting an audience, format, visual, or interactive demo.
 - For X/Twitter, Bluesky, Mastodon, LessWrong, Alignment Forum, lab-blog, or similar researcher-facing outputs, also read [references/researcher-social-formats.md](references/researcher-social-formats.md).
-- Copy and adapt [assets/public-package-template.md](assets/public-package-template.md) when the user wants a multi-part package.
+- Copy and adapt [assets/public-draft-template.md](assets/public-draft-template.md) for the audience-facing draft.
+- Copy and adapt [assets/public-package-template.md](assets/public-package-template.md) for the internal run record or a multi-part package.
 - Copy and adapt [assets/demo-brief-template.md](assets/demo-brief-template.md) before building a website or interactive demo.
+
+## Interface and artifact contract
+
+Choose a short, recognizable, lowercase hyphenated paper name, normally two to six words; honor a user-supplied name. Use the extension the user requests. If none is requested, use `.md`.
+
+For an ordinary run:
+
+- Save only the audience-facing artifact as `<short-paper-name>.<extension>` in the user-selected output directory, or the current task directory when no output directory is specified.
+- Present the audience brief, 30-second orientation, core evidence map, verification queue, approval state, and other process output in the AI chat or harness interface. Do not create `comm-public-run.md` unless the user asks to persist the run.
+- Keep evidence tables, verification queues, approval checklists, and agent workflow notes out of the audience artifact.
+
+For a repository demo:
+
+- Write the audience artifact to `demo/<short-paper-name>/<short-paper-name>.<extension>`.
+- Write the interface output to `demo/<short-paper-name>/comm-public-run.md` so the demo shows what the tool presented. Link to the audience artifact; do not duplicate its full text.
+
+For non-Markdown output, use the relevant document, PDF, or presentation workflow and verify the rendered artifact. Do not leave an extra Markdown copy unless the user requests both formats.
 
 ## Workflow
 
-### 1. Establish audience, constraints, and source authority
+### 1. Set a rapid delivery frame
 
-First ask the user what source material is available. It can be more than a paper or preprint: system cards, technical reports, blog posts, LessWrong / Alignment Forum / EA Forum threads, X/Twitter threads, project pages, talks, datasets, or code all count. For a widely discussed or contested result, also gather replication and challenge efforts, which often appear on those forums or independent blogs rather than in peer-reviewed venues (carry them into the ledger in step 2).
+Identify the primary source, then state a compact delivery frame: one audience, one communication goal, requested format/channel, tone, length, and deadline. Infer missing choices from the request and label the assumptions. Ask only when a missing choice would materially change the result; do not make the user complete an intake before seeing useful copy.
 
-For every source, record title, authors or organization, URL or DOI, date/version, peer-review / preprint / informal status, funder, conflicts, and reuse license when stated; which source is authoritative when versions conflict; and missing supplements, appendices, code, data, or related sources that prevent verification.
+Before the first draft, record the primary source's title, URL or DOI, date/version, and publication status. Flag obvious version conflicts or missing central results. Complete the full source, funding/conflict, supplement, code/data, and rights record during verification.
 
-Then propose an audience-and-constraints brief by inference and show it to the user for confirmation before drafting. Do not silently assume it. State:
+State:
 
 - who the single primary audience is and what they already know;
 - what they care about, decide, or want to do next;
@@ -42,37 +60,55 @@ Then propose an audience-and-constraints brief by inference and show it to the u
 
 Recommend one primary audience rather than writing for "everyone." Do not assume the goal is persuasion: choose among informing, enabling a decision, inviting scrutiny, teaching a concept, gathering feedback, or motivating a clearly supported action.
 
-### 2. Build the main-claim ledger
+### 2. Build a message map and deliver the first draft
 
-Identify three to seven claims that the proposed communication would stand or fall on. For each claim, record:
+Read the abstract or executive summary, conclusion/discussion, and the central result, table, or figure before drafting. Create a compact message map with:
+
+- one obvious main takeaway in one or two sentences;
+- up to two supporting claims;
+- why the takeaway matters to this audience;
+- the leading limitation or non-finding.
+
+For each of the one to three core claims, record a compact evidence card:
 
 | Field | Required content |
 |---|---|
 | Plain claim | One falsifiable sentence, not a slogan |
 | Claim class | Capability, propensity, misuse uplift, observed deployment evidence, mechanism, forecast, or normative interpretation |
 | Source anchor | Page/section/table/figure plus URL or DOI |
-| Evidence | Design, sample/task set, comparison, and exact result |
-| Conditions | Model/version, prompts, elicitation, tools, scaffolding, fine-tuning, sampling, access, time/budget, and evaluator setup when relevant |
-| Quantitative context | Numerator/denominator, units, uncertainty/intervals, variance, base rate, and absolute as well as relative effects when available |
-| Scope boundary | What populations, tasks, settings, and time period the evidence does and does not cover |
-| Caveats | The source's own limitations plus clearly labeled additional limitations |
+| Evidence | Central design/result and comparison |
+| Conditions | Only conditions that change how the claim should be interpreted |
+| Number context | Denominator/unit, baseline, uncertainty, and selection status when material |
+| Boundary | The most likely overreading and what the work does not establish |
 | Status | Directly reported, derived, contextual, disputed, speculative, or normative |
 
-For a prominent or contested result, add a replication and challenge row: list independent reproduction, extension, or rebuttal attempts and their outcomes (reproduced, partial, failed, or contested), with links and the conditions each used. Include forum and blog sources (LessWrong, Alignment Forum, EA Forum, independent blogs) when that is where the replication discussion lives, and label their status accordingly. For example, communication about alignment faking must state which follow-up efforts reproduced or failed to reproduce the effect and under what conditions, rather than presenting the original result as settled.
+Immediately deliver:
 
-### 3. Run the mandatory human claim checkpoint
+1. a 30-second orientation: `what happened / why it matters / what not to conclude`;
+2. `<short-paper-name>.<extension>` containing the requested audience-facing copy, front-loaded with the main takeaway;
+3. in the chat or harness, the compact evidence cards and a short `verify next` list. Persist this interface output to `comm-public-run.md` only for a demo or when explicitly requested.
 
-Stop and show the compact ledger before writing polished copy. Ask the human to confirm:
+Use visible placeholders such as `[VERIFY NUMBER]` rather than guessing. A working draft may be incomplete; it may not contain an unsupported factual claim.
+
+### 3. Verify the load-bearing claims and revise
+
+Verify the headline, opening, one to three core claims, every material number, caption/visual, quote, and call to action in the audience artifact against the primary sources. Update the evidence record in the chat or harness, and in `comm-public-run.md` when running a demo. Then check the closest related work, replication/challenge status, funding/conflicts, source version, and rights needed for this format. For a prominent or contested result, record independent reproduction, extension, or rebuttal attempts and the conditions they used; label informal venues accordingly.
+
+Expand the evidence cards into the full claim-ledger fields—complete conditions, quantitative context, scope, caveats, and status—only when the artifact is high stakes, technically contested, long-form, or likely to be reused across channels. Revise the working draft after verification and attach each interpretation-changing qualifier to the claim it changes.
+
+### 4. Get human approval on concrete copy
+
+Show the revised draft and core evidence map together. Ask the responsible human to confirm:
 
 1. Are these the right main claims and do they accurately reflect the source?
 2. Which claims should be added, removed, narrowed, or reordered?
 3. Which interpretations require an author or subject-matter expert?
 
-Invite a non-researcher to explain the result in their own words. Check each part against the ledger and label it `supported`, `needs nuance`, or `not supported`, with a short source-linked reason. Preserve the user's useful language only after verification. Update the ledger and record approval or unresolved disagreements.
+Record approval, required changes, and unresolved disagreements. Approval applies to the dated draft and source versions, not to future derivatives.
 
-### 4. Decide the detail budget
+### 5. Match the detail budget to the audience
 
-Using the audience brief confirmed in step 1, propose a depth and let the human adjust it:
+Using the audience brief stated in step 1, propose a depth and let the human adjust it:
 
 - **Snapshot:** one core result, why it matters, essential conditions, and one leading caveat.
 - **Explainer:** question, method, main results, conditions, limitations, context, and what remains unknown.
@@ -81,9 +117,9 @@ Using the audience brief confirmed in step 1, propose a depth and let the human 
 
 Never remove a detail that changes the claim's meaning merely to meet a word count. Shorten secondary background first.
 
-### 5. Design the package
+### 6. Design the package
 
-Use the approved ledger as the content spine. A typical package contains:
+Use the approved core evidence map or expanded ledger as the content spine. A typical package contains:
 
 - a plain-language summary with a descriptive, non-hyped title;
 - a “what was tested / what was found / what was not shown” block;
@@ -94,19 +130,19 @@ Use the approved ledger as the content spine. A typical package contains:
 - an FAQ derived from likely audience questions;
 - optional visual, glossary, short-form adaptations, and demo.
 
-For the plain-language core (a snapshot or explainer), a reliable spine is: a one-sentence summary; the big idea carried by one strong analogy; how it works; why it matters; what to be skeptical of; and three things to remember. Keep each element traceable to a ledger claim and keep every interpretation-changing condition attached.
+For the plain-language core (a snapshot or explainer), a reliable spine is: a one-sentence summary; the big idea carried by one strong analogy; how it works; why it matters; what to be skeptical of; and no more than three things to remember. Keep each element traceable to a core claim and keep every interpretation-changing condition attached.
 
 Write in short sentences and concrete words. Define each necessary term in place or cut it. Prefer one strong analogy over several weak ones, and do not let the analogy imply more than the evidence shows.
 
-Make every headline, caption, chart annotation, social post, and metadata description traceable to a ledger claim. Do not let short-form derivatives become stronger than the long-form artifact.
+Make every headline, caption, chart annotation, social post, and metadata description traceable to a core claim. Do not let short-form derivatives become stronger than the long-form artifact.
 
-### 6. Build a demo only when it improves understanding
+### 7. Build a demo only when it improves understanding
 
 Choose the least risky interaction that answers the learning goal: annotated walkthrough, explorable aggregate results, scenario comparison, method simulator, or interactive model card. Treat a live model endpoint as an exception requiring a documented threat model and human approval.
 
 Complete the demo brief first. Include an always-visible explanation of what is simulated or measured, conditions, limitations, uncertainty, safety boundaries, data provenance, accessibility, and a link to the source. Test misleading edge cases, mobile and keyboard use, screen-reader semantics, reduced motion, and failure states.
 
-### 7. Test comprehension and revise
+### 8. Test comprehension and revise
 
 Ask at least one representative reader to state:
 
@@ -117,13 +153,16 @@ Ask at least one representative reader to state:
 
 Revise misunderstandings that the artifact caused. Do not “correct” value disagreements as if they were factual confusion.
 
-### 8. Audit and hand off
+For time-sensitive work, test the headline plus 30-second orientation first; test the full artifact before publication. Reader testing improves communication but does not approve scientific claims.
 
-Invoke `$comm-audit` with the complete artifact, approved claim ledger, authoritative sources/versions, audience brief, channel, related-work notes, and demo/visual assets. Require a readiness decision, claim-to-source matrix, prioritized findings, completed checklist, and communication strengths worth retaining.
+### 9. Audit and hand off
 
-Repair failures, rerun `$comm-audit`, or list them as unresolved blockers. Deliver the audit report with the package together with:
+Invoke `$comm-audit` in rapid mode on the working draft when early feedback is useful. Before publication, invoke its full mode with the complete artifact, approved core evidence map or claim ledger, authoritative sources/versions, audience brief, channel, related-work notes, and demo/visual assets.
 
-- the approved claim ledger;
+Repair failures in the standalone draft, rerun `$comm-audit`, or list them as unresolved blockers. Deliver the audit report with the package together with:
+
+- `<short-paper-name>.<extension>` and, for demos or explicit persistence requests only, `comm-public-run.md`;
+- the approved core evidence map or expanded claim ledger;
 - a claim-to-artifact traceability map;
 - source/version and license notes;
 - communication contributors, their roles, human reviewers, and approval status;
