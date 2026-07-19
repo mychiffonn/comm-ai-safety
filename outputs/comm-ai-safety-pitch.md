@@ -55,6 +55,9 @@ The enforceable rule: no artifact is called audited or publishable until human c
 
 ## Install the skills. Start with the worked demo. Make a public claim easier to verify.
 
-- github.com/mychiffonn/comm-ai-safety
-- Worked case: *Emergent Misalignment*
-- Open Agent Skills · source-linked · human-in-the-loop
+Scan for the GitHub repo.
+
+![w:180](comm-ai-safety-github-qr.png)
+
+- Worked demo included
+- Human-reviewed claims
