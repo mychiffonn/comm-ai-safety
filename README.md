@@ -1,61 +1,29 @@
 # comm-ai-safety: Communicate AI safety research with evidence-preserving agent skills
 
-`comm-ai-safety` is a portable bundle of Agent Skills for turning technical AI safety sources into public communication without dropping the conditions, uncertainty, caveats, and provenance that determine what a result actually means.
+`comm-ai-safety` is a portable bundle of Agent Skills for publishing AI-safety research accurately across public, press, and explanatory formats.
 
-It supports two complementary users:
+## Why this exists
 
-- researchers creating a reviewable public communication package around their own work;
-- non-researchers learning from primary technical sources and producing an audience-appropriate explainer, release, or supporting artifact.
+AI-safety results are easy to overstate when they leave a paper. An elicited capability can be reported as typical model behavior; a benchmark score as real-world harm; or a model-only result as evidence of human misuse uplift. Each changes the claim.
 
-## Motivation and theory of change
+The package gives researchers, communications teams, and independent explainers a repeatable publication workflow:
 
-Public-facing research communication is valuable but structurally difficult. Research on public engagement reports limited time, resources, training, institutional support, and career recognition ([recent UK survey](https://pmc.ncbi.nlm.nih.gov/articles/PMC12972233/); [review of public-engagement literature](https://pmc.ncbi.nlm.nih.gov/articles/PMC8263305/)). At the same time, simply adding more facts is not enough: audiences bring different goals, knowledge, values, and trust relationships ([National Academies](https://www.nationalacademies.org/read/23674/chapter/4)). AI safety adds unusually sharp failure modes: elicited capability can be reported as ordinary behavior, model-only scores as human misuse uplift, and a benchmark as real-world harm.
+1. Extract a source-anchored claim ledger: result, conditions, numbers, scope, and caveats.
+2. Have a responsible human approve the claims and a representative reader test their understanding.
+3. Adapt the approved claims for one audience and format.
+4. Audit the finished artifact against the sources before calling it audited or publishable.
 
-| Communication bottleneck                     | Bundle response                                                               |
-| -------------------------------------------- | ----------------------------------------------------------------------------- |
-| Time, skill, and coordination cost           | Reusable workflows, checklists, and package templates                         |
-| Fear of misstatement or hype                 | Claim ledger, source anchors, human approval, and adversarial audit           |
-| Different audience needs                     | Explicit audience brief, detail budget, layering, and comprehension tests     |
-| Evaluation nuance lost in translation        | Capability/propensity/misuse-uplift labels and condition-preserving language  |
-| Demos create misunderstanding or misuse risk | Demo classification, threat review, disclosure, and accessibility gates       |
-| Communication labor receives little credit   | Named contributor/reviewer roles, versioned packages, and suggested citations |
+This is a quality-control layer for communication, not a substitute for subject-matter, security, legal, or editorial review. Its intended effect is concrete: readers can distinguish **capability**, **propensity**, **misuse uplift**, and **observed deployment evidence**, rather than treating them as interchangeable.
 
-### The gap
+## What is included
 
-AI-safety communication often fails at the exact point where evidence moves from a technical source to a decision-relevant public claim. A headline can turn an elicited capability into ordinary model behavior; a benchmark result into demonstrated real-world harm; or a model-only outcome into a claim about human misuse. These are not merely stylistic errors: they can distort public understanding, make it harder for journalists and decision-makers to evaluate evidence, and create avoidable hype or panic around safety research.
+| Skill | Use it to | Key safeguard |
+|---|---|---|
+| `comm-public` | Create explainers, FAQs, social copy, visual briefs, and safer demo briefs from primary sources. | Audience brief, claim ledger, comprehension check, and demo safety gate. |
+| `comm-press` | Create releases, media briefs, pitches, and journalist FAQs. | Source-verifiable claims, independent context, quote approval, and final audit. |
+| `comm-audit` | Check a public artifact or coverage corpus against authoritative sources. | Claim-to-source matrix plus findings on conditions, caveats, numbers, safety, rights, and accessibility. |
 
-Existing writing guidance rarely gives a researcher, communications professional, or independent explainer a reusable way to preserve **provenance, evaluation conditions, uncertainty, and scope** across a release, explainer, social post, visual, and demo. This package fills that operational gap.
-
-### Who it is for
-
-- **AI-safety researchers and research leads** who need a reviewable way to communicate their work without overclaiming it.
-- **University and lab communications teams** who need newsworthy, source-verifiable press materials under time pressure.
-- **Journalists, independent explainers, and technically curious community members** who need to translate primary sources for a specific audience while retaining the details that change a claim’s meaning.
-
-### How it creates value
-
-The intervention is intentionally narrow: make accurate communication the easier default at the moment people draft and review public-facing material.
-
-1. A user starts with primary sources and creates a compact, source-anchored claim ledger.
-2. A responsible human validates the main claims and a representative reader checks their understanding.
-3. The authoring skills adapt those approved claims to a defined audience and format without separating them from material conditions and caveats.
-4. `comm-audit` independently checks the finished artifact against the ledger and source record, flagging claim inflation, missing context, unsafe demo design, rights issues, and accessibility gaps before publication.
-5. The resulting package leaves behind reusable evidence, reviewer roles, and an audit trail that can be updated, credited, and reused across channels.
-
-If teams adopt this workflow, fewer public artifacts should collapse capability, propensity, misuse uplift, and observed deployment evidence into one another. That gives readers and decision-makers more trustworthy information to scrutinize, while reducing the time and coordination burden that otherwise discourages careful outreach. The package does **not** claim that better communication alone changes institutional incentives, policy, or model behavior; its contribution is a practical quality-control layer at a known failure point.
-
-This bundle reduces the work needed to produce reusable communication artifacts while keeping humans responsible for the main claims. The authoring skills use the same backbone:
-
-1. inventory the authoritative sources;
-2. extract a traceable main-claim ledger;
-3. pause for human validation or teach-back;
-4. choose an audience and explicit detail budget;
-5. draft a layered package;
-6. invoke `comm-audit` to check claims, numbers, conditions, caveats, language, context, rights, safety, and accessibility.
-
-The bundle can lower marginal effort and make communication work easier to review, reuse, and credit. It cannot by itself change promotion, funding, or publication incentives; institutions still need to recognize this work.
-
-The workflow is informed by evidence on barriers to public engagement, audience-centered science communication, plain-language summaries, uncertainty communication, AI evaluation practice, press-release exaggeration, and AI journalism pitfalls. The source links and their operational implications live in each skill's `references/` directory.
+The skills are informed by evidence on public-engagement barriers, audience-centred communication, uncertainty communication, AI evaluation practice, press-release exaggeration, and AI journalism pitfalls. Their operational sources are linked in each skill’s `references/` directory.
 
 ## Skills
 
