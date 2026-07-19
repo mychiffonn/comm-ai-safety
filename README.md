@@ -9,7 +9,7 @@ It supports two complementary users:
 
 ## Motivation and theory of change
 
-Public-facing research communication is valuable but structurally difficult. Research on public engagement reports limited time, resources, training, institutional support, and career recognition ([recent UK survey](https://pmc.ncbi.nlm.nih.gov/articles/PMC12972233/); [review of public-engagement literature](https://pmc.ncbi.nlm.nih.gov/articles/PMC8263305/)). At the same time, simply adding more facts is not enough: audiences bring different goals, knowledge, values, and trust relationships ([National Academies](https://www.nationalacademies.org/read/23674/chapter/4)). AI safety adds unusually sharp failure modes: elicited capability can be reported as ordinary behavior, model-only scores as human misuse uplift, a benchmark as real-world harm, or a vivid demo as representative evidence.
+Public-facing research communication is valuable but structurally difficult. Research on public engagement reports limited time, resources, training, institutional support, and career recognition ([recent UK survey](https://pmc.ncbi.nlm.nih.gov/articles/PMC12972233/); [review of public-engagement literature](https://pmc.ncbi.nlm.nih.gov/articles/PMC8263305/)). At the same time, simply adding more facts is not enough: audiences bring different goals, knowledge, values, and trust relationships ([National Academies](https://www.nationalacademies.org/read/23674/chapter/4)). AI safety adds unusually sharp failure modes: elicited capability can be reported as ordinary behavior, model-only scores as human misuse uplift, and a benchmark as real-world harm.
 
 | Communication bottleneck                     | Bundle response                                                               |
 | -------------------------------------------- | ----------------------------------------------------------------------------- |
@@ -151,7 +151,7 @@ npx skills add . --skill comm-audit --agent codex
 After the repository is published, replace `.` with its GitHub shorthand or URL, for example:
 
 ```bash
-npx skills add OWNER/comm-ai-safety --skill comm-audit --skill comm-public
+npx skills add mychiffonn/comm-ai-safety --skill comm-audit --skill comm-public
 ```
 
 `comm-public` and `comm-press` can be installed alone for drafting, but their workflows must not label work audited, final, or publishable unless `comm-audit` is available and run.
